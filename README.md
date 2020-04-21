@@ -11,8 +11,11 @@ AxSizzle takes away a bit of the hassle with setting up a SOAP client and import
 
 ## Installation
 
+For now, please clone this repo and import the AxSizzle class.
+
 ```
-pip install axsizzle
+# (WIP)
+# pip install axsizzle
 ```
 
 ## Configuration and Usage
@@ -40,10 +43,10 @@ ucm = {
 client = new AxSizzle(ucm)
 ```
 
-Each API request needs an object that specifies two properties:
+Each API request needs a dictionary that specifies two properties:
 
 - method: The AXL API method to call
-- body: The API body in JSON format
+- body: The API body in dictionary format
 
 ### Get Requests
 
@@ -69,6 +72,8 @@ message = {
 ```
 
 ### List Requests
+
+`searchCriteria` and `returnedTags` can take multiple options so make sure you use a list type.
 
 ```python
 message = {
@@ -139,7 +144,6 @@ else:
 
 ## Todo
 
-- Improve error handling
 - Handle throttle responses
 
 ## Author(s)
